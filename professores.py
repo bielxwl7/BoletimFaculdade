@@ -7,4 +7,14 @@ def acesso_professor():
     login = input("Digite seu login: ")
     senha = input("Digite sua senha: ")
 
-    print(f"Seja bem vindo {login}! O que deseja fazer?")
+    professor = PROFESSORES.get(login)
+
+    if professor is None:
+        print("Professor não encontrado")
+        return
+    if professor["senha"] != senha:
+        print("Senha incorreta.")
+        return
+
+    print("--------------------------------------")
+    print(f"Seja bem-vindo, {professor['nome']}!")

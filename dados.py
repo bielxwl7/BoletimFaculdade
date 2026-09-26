@@ -38,7 +38,7 @@ ALUNOS = {
 PROFESSORES = {
     "professor-01": {
         "nome": "Carlos Oliveira",
-        "senha": "abdc",
+        "senha": "abcd",
         "disciplinas": ["Banco de dados"]
     },
     "professor-02": {
