@@ -18,7 +18,7 @@ def acesso_aluno():
         return
 
     print("--------------------------------------")
-    print(f"Seja bem-vindo, {aluno['nome']}!")
+    print(f"Seja bem-vindo(a), {aluno['nome']}!")
     print(f"Curso: {aluno['curso']}")
     print("--------------- BOLETIM --------------")
 
