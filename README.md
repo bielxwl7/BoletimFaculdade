@@ -1,7 +1,6 @@
 # Boletim Faculdade
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow?style=for-the-badge)
 ![License](https://img.shields.io/badge/licen%C3%A7a-MIT-green?style=for-the-badge)
 
 Sistema de boletim universitário executado no terminal, desenvolvido em Python para praticar organização de módulos, funções, estruturas condicionais, repetição e manipulação de dados.
@@ -38,40 +37,6 @@ boletimFaculdade/
 ├── professores.py  # Autenticação e operações dos professores
 ├── LICENSE         # Licença do projeto
 └── README.md       # Documentação
-```
-
-## Instalação
-
-### Pré-requisitos
-
-Antes de começar, instale:
-
-- Python 3.10 ou superior
-- Git, caso deseje clonar o repositório
-
-### Obtenha o projeto
-
-Clone o repositório e acesse sua pasta:
-
-```bash
-git clone <URL_DO_REPOSITORIO>
-cd boletimFaculdade
-```
-
-Você também pode baixar o projeto como arquivo ZIP e extrair seu conteúdo.
-
-## Como executar
-
-No terminal, dentro da pasta do projeto, execute:
-
-```bash
-python boletim.py
-```
-
-No Windows, caso o comando anterior não esteja disponível, utilize:
-
-```powershell
-py boletim.py
 ```
 
 ## Uso
