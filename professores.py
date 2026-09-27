@@ -1,20 +1,25 @@
-from dados import PROFESSORES
+from dados import ALUNOS, PROFESSORES
 
-def acesso_professor():
-    print("Você entrou na área do professor.")
-    print("Digite abaixo seu login e senha.")
+def listar_alunos(professor):
+    print("========== LISTA DE ALUNOS ==========")
 
-    login = input("Digite seu login: ")
-    senha = input("Digite sua senha: ")
+    aluno_encontrado = False
 
-    professor = PROFESSORES.get(login)
+    for matricula, aluno in ALUNOS.items():
+        for disciplina in professor["diciplinas"]:
+            if disciplina in aluno["disciplinas"]:
+                notas = aluno["disciplinas"][disciplina]
 
-    if professor is None:
-        print("Professor não encontrado")
-        return
-    if professor["senha"] != senha:
-        print("Senha incorreta.")
-        return
+                print(f"Matrícula: {matricula}")
+                print(f"Nome: {aluno['nome']}")
+                print(f"Curso: {aluno['curso']}")
+                print(f"Disciplina: {disciplina}")
+                print(f"Primeira nota: {notas['nota_1']}")
+                print(f"Segunda nota: {notas['nota_2']}")
+                print(f"Faltas: {notas['faltas']}")
+                print("------------------------------------")
 
-    print("--------------------------------------")
-    print(f"Seja bem-vindo, {professor['nome']}!")
+                aluno_encontrado = True
+
+    if not aluno_encontrado:
+        print("Nenhum aluno foi encontrado para suas disciplina.")
