@@ -10,7 +10,7 @@ print("1 - Sou um Aluno.")
 print("2 - Sou um professor.")
 print("3 - Sair.")
 
-selecionado = input("Digite aqui: ")
+selecionado = input("Digite uma opção: ")
 
 if selecionado == "1":
     acesso_aluno()

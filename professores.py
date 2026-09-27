@@ -6,7 +6,7 @@ def listar_alunos(professor):
     aluno_encontrado = False
 
     for matricula, aluno in ALUNOS.items():
-        for disciplina in professor["diciplinas"]:
+        for disciplina in professor["disciplinas"]:
             if disciplina in aluno["disciplinas"]:
                 notas = aluno["disciplinas"][disciplina]
 
@@ -83,6 +83,7 @@ def alterar_nota(professor):
 
     except ValueError:
         print("A nota precisa ser um número")
+        return
 
     if nova_nota < 0 or nova_nota > 10:
         print("A nota precisa estar entre 0 e 10.")
@@ -98,3 +99,40 @@ def alterar_nota(professor):
     print(f"Disciplina: {disciplina_escolhida}")
     print(f"Nota anterior: {nota_anterior}")
     print(f"Nova nota: {nova_nota}")
+
+def acesso_professor():
+        
+    print("Você entrou na área do professor.")
+    print("--------------------------------------")
+    print("Digite abaixo seu login e senha.")
+
+    login = input("Digite seu login: ")
+    senha = input("Digite sua senha: ")
+
+    professor = PROFESSORES.get(login)
+
+    if professor is None:
+        print("Professor não enontrado.")
+        return
+
+    if professor["senha"] != senha:
+        print("Senha incorreta.")
+        return
+
+    print("--------------------------------------")
+    print("1 - Consultar alunos.")
+    print("2 - Lançar ou alterar notas.")
+    print("3 - Sair da área do professor.")
+
+    selecionado = input("Digite uma opção: ")
+
+    if selecionado == "1":
+            listar_alunos(professor)
+    elif selecionado == "2":
+            alterar_nota(professor)
+    elif selecionado == "3":
+        print("Saindo da área do professor...")
+        exit()
+    else:
+        print("Opção inválida")
+        return
